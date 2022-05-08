@@ -53,14 +53,24 @@
     <UnityVersion>2020.3.23f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXLoopScript.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\laser_script.cs" />
+    <Compile Include="Assets\Epic Toon FX\Scripts\ETFXPitchRandomizer.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\destory_simple.cs" />
+    <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\recyle_inst.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\muzzle_flash.cs" />
+    <Compile Include="Assets\Epic Toon FX\Scripts\ETFXLightFade.cs" />
+    <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\assault57.cs" />
+    <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\ParticleEffectsLibrary.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\flame_script.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\bunny_receive_dmg.cs" />
+    <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
+    <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\UICanvasManager.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\petrol_can.cs" />
+    <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXTarget.cs" />
+    <Compile Include="Assets\Epic Toon FX\Scripts\ETFXRotation.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\timer_destroy.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\polygon_fps_controller.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\equipment.cs" />
@@ -71,24 +81,20 @@
     <Compile Include="Assets\POLYGON - FPS free\scripts\targets_for_bunny.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\blood_floor_particle.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\shoot_handle.cs" />
+    <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\axe.cs" />
+    <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXSceneManager.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\bunny_spawn.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\find_destory_able_props.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\killer_bunny.cs" />
-    <Compile Include="Assets\POLYGON - FPS free\scripts\old_pistol.cs" />
-    <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\ParticleEffectsLibrary.cs" />
-    <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXLoopScript.cs" />
-    <Compile Include="Assets\Epic Toon FX\Scripts\ETFXPitchRandomizer.cs" />
-    <Compile Include="Assets\Epic Toon FX\Scripts\ETFXLightFade.cs" />
-    <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs" />
-    <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs" />
-    <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
-    <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXTarget.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\PEButtonScript.cs" />
-    <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
-    <Compile Include="Assets\Epic Toon FX\Scripts\ETFXRotation.cs" />
-    <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXSceneManager.cs" />
-    <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\UICanvasManager.cs" />
+    <Compile Include="Assets\POLYGON - FPS free\scripts\old_pistol.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Controllers\PlayerController.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Inputs\InputReader.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Abstracts\Inputs\IInputReader.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Abstracts\Movements\IMover.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Movements\MoveWithCharacterController.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Animations\CharacterAnimation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Epic Toon FX\Prefabs\Environment\Environment FX.txt" />
