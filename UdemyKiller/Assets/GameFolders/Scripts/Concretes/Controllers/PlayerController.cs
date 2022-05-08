@@ -13,16 +13,27 @@ namespace UdemyKiller.Controllers
     {
         [Header("Movement Informations")]
         [SerializeField] float _moveSpeed;
+        [SerializeField] float _turnSpeed =10f;
+        [SerializeField] Transform _turnTransform;
+
+        public Transform TurnTransform => _turnTransform;
 
         IInputReader _input;
         IMover _mover;
+        IRotator _xRotation;
+        IRotator _yRotator;
+
+
         CharacterAnimation _animation; 
 
         Vector3 _direction;
 
+
         void Awake()
         {
             _input = GetComponent<IInputReader>();
+            _xRotation = new RotatorX(this);
+            _yRotator = new RotatorY(this);
             _mover = new MoveWithCharacterController(this);
             _animation = new CharacterAnimation(this);
         }
@@ -31,11 +42,15 @@ namespace UdemyKiller.Controllers
         void Update()
         {
             _direction = _input.Direction;
+
+            _xRotation.RotationAction(_input.Rotation.x, _turnSpeed);
+            _yRotator.RotationAction(_input.Rotation.y, _turnSpeed);
         }
 
         private void FixedUpdate()
         {
             _mover.MoveAction(_direction,_moveSpeed);
+           
         }
         private void LateUpdate()
         {

@@ -62,9 +62,12 @@
     <Compile Include="Assets\POLYGON - FPS free\scripts\muzzle_flash.cs" />
     <Compile Include="Assets\Epic Toon FX\Scripts\ETFXLightFade.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Controllers\PlayerController.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\assault57.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\ParticleEffectsLibrary.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\flame_script.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Inputs\InputReader.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Abstracts\Inputs\IInputReader.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\bunny_receive_dmg.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\UICanvasManager.cs" />
@@ -78,9 +81,12 @@
     <Compile Include="Assets\POLYGON - FPS free\scripts\destroy_object.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\crowbar_hit.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\to_parent_connect.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Movements\MoveWithCharacterController.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\targets_for_bunny.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\blood_floor_particle.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\shoot_handle.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Animations\CharacterAnimation.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Abstracts\Movements\IMover.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\axe.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXSceneManager.cs" />
@@ -89,12 +95,9 @@
     <Compile Include="Assets\POLYGON - FPS free\scripts\killer_bunny.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\PEButtonScript.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\old_pistol.cs" />
-    <Compile Include="Assets\GameFolders\Scripts\Concretes\Controllers\PlayerController.cs" />
-    <Compile Include="Assets\GameFolders\Scripts\Concretes\Inputs\InputReader.cs" />
-    <Compile Include="Assets\GameFolders\Scripts\Abstracts\Inputs\IInputReader.cs" />
-    <Compile Include="Assets\GameFolders\Scripts\Abstracts\Movements\IMover.cs" />
-    <Compile Include="Assets\GameFolders\Scripts\Concretes\Movements\MoveWithCharacterController.cs" />
-    <Compile Include="Assets\GameFolders\Scripts\Concretes\Animations\CharacterAnimation.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Movements\RotatorX.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Movements\RotatorY.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Abstracts\Movements\IRotator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Epic Toon FX\Prefabs\Environment\Environment FX.txt" />
