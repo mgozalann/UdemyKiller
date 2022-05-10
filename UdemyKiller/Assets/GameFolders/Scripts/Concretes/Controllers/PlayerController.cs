@@ -16,6 +16,9 @@ namespace UdemyKiller.Controllers
         [SerializeField] float _turnSpeed =10f;
         [SerializeField] Transform _turnTransform;
 
+
+        [SerializeField] WeaponController _currentWeapon;
+
         public Transform TurnTransform => _turnTransform;
 
         IInputReader _input;
@@ -37,14 +40,19 @@ namespace UdemyKiller.Controllers
             _mover = new MoveWithCharacterController(this);
             _animation = new CharacterAnimation(this);
         }
-
-        // Update is called once per frame
+ 
+        //characterController
         void Update()
         {
             _direction = _input.Direction;
 
             _xRotation.RotationAction(_input.Rotation.x, _turnSpeed);
             _yRotator.RotationAction(_input.Rotation.y, _turnSpeed);
+
+            if (_input.IsAttackButtonPressed)
+            {
+                _currentWeapon.Attack();
+            }
         }
 
         private void FixedUpdate()

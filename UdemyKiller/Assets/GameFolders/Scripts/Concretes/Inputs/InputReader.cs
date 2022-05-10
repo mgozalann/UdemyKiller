@@ -10,6 +10,7 @@ namespace UdemyKiller.Inputs
     {
         public Vector3 Direction { get; private set; }
         public Vector2 Rotation { get; private set; }
+        public bool IsAttackButtonPressed { get; private set; }
         public void OnMove(InputAction.CallbackContext context)
         {
             Vector2 oldDirection = context.ReadValue<Vector2>();
@@ -19,6 +20,11 @@ namespace UdemyKiller.Inputs
         public void OnRotator(InputAction.CallbackContext context)
         {
             Rotation = context.ReadValue<Vector2>();
+        }
+
+        public void OnAttack(InputAction.CallbackContext context)
+        {
+            IsAttackButtonPressed = context.ReadValueAsButton();
         }
     }
 

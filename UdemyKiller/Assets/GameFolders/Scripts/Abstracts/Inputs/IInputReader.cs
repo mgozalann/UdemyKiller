@@ -8,6 +8,6 @@ namespace UdemyKiller.Abstracts.Inputs
     {
         Vector3 Direction { get; }
         Vector2 Rotation { get; }
+        bool IsAttackButtonPressed { get; }
     }
-
 }

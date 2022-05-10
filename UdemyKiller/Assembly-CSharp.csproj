@@ -67,6 +67,7 @@
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\ParticleEffectsLibrary.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\flame_script.cs" />
     <Compile Include="Assets\GameFolders\Scripts\Concretes\Inputs\InputReader.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Abstracts\Movements\IRotator.cs" />
     <Compile Include="Assets\GameFolders\Scripts\Abstracts\Inputs\IInputReader.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\bunny_receive_dmg.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
@@ -85,7 +86,9 @@
     <Compile Include="Assets\POLYGON - FPS free\scripts\targets_for_bunny.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\blood_floor_particle.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\shoot_handle.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Movements\RotatorY.cs" />
     <Compile Include="Assets\GameFolders\Scripts\Concretes\Animations\CharacterAnimation.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Movements\RotatorX.cs" />
     <Compile Include="Assets\GameFolders\Scripts\Abstracts\Movements\IMover.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\axe.cs" />
@@ -95,9 +98,8 @@
     <Compile Include="Assets\POLYGON - FPS free\scripts\killer_bunny.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\PEButtonScript.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\old_pistol.cs" />
-    <Compile Include="Assets\GameFolders\Scripts\Concretes\Movements\RotatorX.cs" />
-    <Compile Include="Assets\GameFolders\Scripts\Concretes\Movements\RotatorY.cs" />
-    <Compile Include="Assets\GameFolders\Scripts\Abstracts\Movements\IRotator.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Controllers\WeaponController.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Movements\Gravity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Epic Toon FX\Prefabs\Environment\Environment FX.txt" />
