@@ -6,7 +6,22 @@ ModelImporter:
   - first:
       74: -203655887218126122
     second: mixamo.com
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: world_war_zombie_diffuse
+    second: {fileID: 2800000, guid: 17f2ee88acbec0048ac3f1987b14d2a7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: world_war_zombie_normal
+    second: {fileID: 2800000, guid: e733ef7089060db46b295712381d863d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: world_war_zombie_specular
+    second: {fileID: 2800000, guid: 9022c1e9b1f40394fa5b26e4c2d5df9a, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
