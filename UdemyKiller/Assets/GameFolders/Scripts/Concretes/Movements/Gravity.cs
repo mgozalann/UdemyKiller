@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace UdemyKiller.Movements
 {
+    [RequireComponent(typeof(CharacterController))]
     public class Gravity : MonoBehaviour
     {
         float _gravity = -9.81f;

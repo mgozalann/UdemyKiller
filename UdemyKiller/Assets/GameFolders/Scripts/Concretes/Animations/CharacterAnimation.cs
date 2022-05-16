@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UdemyKiller.Abstracts.Controllers;
 using UdemyKiller.Controllers;
 using UnityEngine;
 
@@ -8,9 +9,9 @@ namespace UdemyKiller.Animations
     public class CharacterAnimation
     {
         Animator _animator;
-        public CharacterAnimation(PlayerController playerController)
+        public CharacterAnimation(IEntityController entity)
         {
-           _animator = playerController.GetComponentInChildren<Animator>();
+           _animator = entity.transform.GetComponentInChildren<Animator>();
         }
 
         public void MoveAnimation(float moveSpeed)

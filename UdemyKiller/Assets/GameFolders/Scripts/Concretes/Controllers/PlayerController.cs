@@ -6,10 +6,11 @@ using UdemyKiller.Abstracts.Inputs;
 using UdemyKiller.Abstracts.Movements;
 using UdemyKiller.Movements;
 using UdemyKiller.Animations;
+using UdemyKiller.Abstracts.Controllers;
 
 namespace UdemyKiller.Controllers
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : MonoBehaviour, IEntityController
     {
         [Header("Movement Informations")]
         [SerializeField] float _moveSpeed;
@@ -20,6 +21,7 @@ namespace UdemyKiller.Controllers
         [SerializeField] WeaponController _currentWeapon;
 
         public Transform TurnTransform => _turnTransform;
+
 
         IInputReader _input;
         IMover _mover;

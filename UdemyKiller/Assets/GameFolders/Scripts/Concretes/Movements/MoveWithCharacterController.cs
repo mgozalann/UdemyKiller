@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UdemyKiller.Abstracts.Movements;
+using UdemyKiller.Abstracts.Controllers;
 using UdemyKiller.Controllers;
 
 namespace UdemyKiller.Movements
@@ -9,9 +10,9 @@ namespace UdemyKiller.Movements
     public class MoveWithCharacterController : IMover
     {
         CharacterController _characterController;
-        public MoveWithCharacterController(PlayerController playerController)
+        public MoveWithCharacterController(IEntityController entityController)
         {
-            _characterController = playerController.GetComponent<CharacterController>();
+            _characterController = entityController.transform.GetComponent<CharacterController>();
         }
 
         public void MoveAction(Vector3 direction, float moveSpeed)

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -47,17 +47,22 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.11</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.15</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2020.3.23f1</UnityVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXLoopScript.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\laser_script.cs" />
     <Compile Include="Assets\Epic Toon FX\Scripts\ETFXPitchRandomizer.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\destory_simple.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Abstracts\Controllers\IEntityController.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Controllers\EnemyController.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\recyle_inst.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\muzzle_flash.cs" />
     <Compile Include="Assets\Epic Toon FX\Scripts\ETFXLightFade.cs" />
@@ -88,6 +93,7 @@
     <Compile Include="Assets\POLYGON - FPS free\scripts\blood_floor_particle.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\shoot_handle.cs" />
     <Compile Include="Assets\GameFolders\Scripts\Concretes\Movements\RotatorY.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Movements\MoveWithNavMesh.cs" />
     <Compile Include="Assets\GameFolders\Scripts\Concretes\Animations\CharacterAnimation.cs" />
     <Compile Include="Assets\GameFolders\Scripts\Concretes\Movements\RotatorX.cs" />
     <Compile Include="Assets\GameFolders\Scripts\Abstracts\Movements\IMover.cs" />
@@ -100,7 +106,9 @@
     <Compile Include="Assets\POLYGON - FPS free\scripts\killer_bunny.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\PEButtonScript.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\old_pistol.cs" />
-    <Compile Include="Assets\GameFolders\Scripts\Concretes\Controllers\EnemyController.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Combats\Health.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Abstracts\Combats\IHealth.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\ScriptableObjects\HealthScriptableObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Epic Toon FX\Prefabs\Environment\Environment FX.txt" />
