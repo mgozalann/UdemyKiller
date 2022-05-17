@@ -16,7 +16,7 @@ namespace UdemyKiller.Helper
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawSphere(this.transform.position, _attackSO.FloatValue);
+            Gizmos.DrawWireSphere(this.transform.position, _attackSO.FloatValue);
         }
     }
 

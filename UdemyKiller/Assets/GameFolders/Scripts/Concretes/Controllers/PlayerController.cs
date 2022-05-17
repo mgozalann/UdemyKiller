@@ -17,9 +17,6 @@ namespace UdemyKiller.Controllers
         [SerializeField] float _turnSpeed =10f;
         [SerializeField] Transform _turnTransform;
 
-
-        [SerializeField] WeaponController _currentWeapon;
-
         public Transform TurnTransform => _turnTransform;
 
 
@@ -43,7 +40,6 @@ namespace UdemyKiller.Controllers
             _animation = new CharacterAnimation(this);
         }
  
-        //characterController
         void Update()
         {
             _direction = _input.Direction;
@@ -53,7 +49,7 @@ namespace UdemyKiller.Controllers
 
             if (_input.IsAttackButtonPressed)
             {
-                _currentWeapon.Attack();
+                //_currentWeapon.Attack();
             }
         }
 

@@ -20,11 +20,13 @@ namespace UdemyKiller.ScriptableObjects
         [SerializeField] LayerMask _layerMask;
         [SerializeField] float _attackMaxDelay;
         [SerializeField] AttackTypeEnum _attackType;
+        [SerializeField] AnimatorOverrideController animatorOverride;
 
         public int Damage => _damage;
         public float FloatValue => _floatValue;
         public LayerMask LayerMask => _layerMask;
         public float AttackMaxDelay => _attackMaxDelay;
+        public AnimatorOverrideController AnimatorOverride => animatorOverride;
         public IAttackType GetAttackType(Transform transform)
         {
             if(_attackType == AttackTypeEnum.Range)

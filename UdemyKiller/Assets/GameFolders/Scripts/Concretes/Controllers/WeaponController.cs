@@ -14,7 +14,7 @@ namespace UdemyKiller.Controllers
 
         [SerializeField] AttackSO _attackSO;
 
-
+        public AttackSO AttackSO => _attackSO;
         IAttackType _attackType;
 
         float _currentTime;
