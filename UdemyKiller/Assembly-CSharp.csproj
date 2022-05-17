@@ -61,7 +61,10 @@
     <Compile Include="Assets\Epic Toon FX\Scripts\ETFXPitchRandomizer.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\destory_simple.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Abstracts\Combats\IAttackType.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Combats\RangeAttackType.cs" />
     <Compile Include="Assets\GameFolders\Scripts\Abstracts\Controllers\IEntityController.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\ScriptableObjects\AttackSO.cs" />
     <Compile Include="Assets\GameFolders\Scripts\Concretes\Controllers\EnemyController.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\recyle_inst.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\muzzle_flash.cs" />
@@ -89,26 +92,28 @@
     <Compile Include="Assets\POLYGON - FPS free\scripts\crowbar_hit.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\to_parent_connect.cs" />
     <Compile Include="Assets\GameFolders\Scripts\Concretes\Movements\MoveWithCharacterController.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\ScriptableObjects\HealthScriptableObject.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\targets_for_bunny.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\blood_floor_particle.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\shoot_handle.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Combats\MeleeAttackType.cs" />
     <Compile Include="Assets\GameFolders\Scripts\Concretes\Movements\RotatorY.cs" />
     <Compile Include="Assets\GameFolders\Scripts\Concretes\Movements\MoveWithNavMesh.cs" />
     <Compile Include="Assets\GameFolders\Scripts\Concretes\Animations\CharacterAnimation.cs" />
     <Compile Include="Assets\GameFolders\Scripts\Concretes\Movements\RotatorX.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Abstracts\Combats\IHealth.cs" />
     <Compile Include="Assets\GameFolders\Scripts\Abstracts\Movements\IMover.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\axe.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXSceneManager.cs" />
     <Compile Include="Assets\GameFolders\Scripts\Concretes\Movements\Gravity.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Combats\Health.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\bunny_spawn.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\find_destory_able_props.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\killer_bunny.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Helper\MeleeAttackRangeDisplay.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\PEButtonScript.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\old_pistol.cs" />
-    <Compile Include="Assets\GameFolders\Scripts\Concretes\Combats\Health.cs" />
-    <Compile Include="Assets\GameFolders\Scripts\Abstracts\Combats\IHealth.cs" />
-    <Compile Include="Assets\GameFolders\Scripts\Concretes\ScriptableObjects\HealthScriptableObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Epic Toon FX\Prefabs\Environment\Environment FX.txt" />

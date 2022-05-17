@@ -1,5 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UdemyKiller.Abstracts.Combats;
+using UdemyKiller.Combats;
+using UdemyKiller.ScriptableObjects;
 using UnityEngine;
 
 namespace UdemyKiller.Controllers
@@ -7,27 +10,30 @@ namespace UdemyKiller.Controllers
     public class WeaponController : MonoBehaviour
     {
         [SerializeField] bool _canFire;
-        [SerializeField] float _attackDelayTime;
-        [SerializeField] float _distance = 100f;
-        [SerializeField] Camera _camera;
-        [SerializeField] LayerMask _layerMask;
+        [SerializeField] Transform _transformObj;
+
+        [SerializeField] AttackSO _attackSO;
+
+
+        IAttackType _attackType;
 
         float _currentTime;
+
+        private void Awake()
+        {
+            _attackType = _attackSO.GetAttackType(_transformObj);
+        }
         private void Update()
         {
             _currentTime += Time.deltaTime;
-            _canFire = _currentTime > _attackDelayTime;
+            _canFire = _currentTime > _attackSO.AttackMaxDelay;
         }
 
         public void Attack()
         {
             if (!_canFire) return;
-
-            Ray ray = _camera.ViewportPointToRay(Vector3.one / 2f);
-            if(Physics.Raycast(ray, out RaycastHit hit, _distance, _layerMask))
-            {
-                Debug.Log(hit.collider.gameObject.name);
-            }
+            
+            _attackType.AttackAction();
 
             _currentTime = 0;
         }

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499a02837c7c3614da596049bc220d2d, type: 3}
+  m_Name: MeleeAttackSword
+  m_EditorClassIdentifier: 
+  _damage: 50
+  _floatValue: 0.8
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 55
+  _attackMaxDelay: 0.1
+  _attackType: 1
