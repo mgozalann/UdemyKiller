@@ -87,6 +87,7 @@
     <Compile Include="Assets\POLYGON - FPS free\scripts\timer_destroy.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\polygon_fps_controller.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\equipment.cs" />
+    <Compile Include="Assets\GameFolders\Scripts\Concretes\Controllers\InventoryController.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\spawn_blood.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\destroy_object.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\crowbar_hit.cs" />
@@ -114,7 +115,6 @@
     <Compile Include="Assets\GameFolders\Scripts\Concretes\Helper\MeleeAttackRangeDisplay.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\PEButtonScript.cs" />
     <Compile Include="Assets\POLYGON - FPS free\scripts\old_pistol.cs" />
-    <Compile Include="Assets\GameFolders\Scripts\Concretes\Controllers\InventoryController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Epic Toon FX\Prefabs\Environment\Environment FX.txt" />

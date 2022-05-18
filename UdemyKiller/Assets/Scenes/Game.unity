@@ -133,6 +133,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1209353384040626531, guid: d6d52077fa9c98c42a886747e7c517d2, type: 3}
   m_PrefabInstance: {fileID: 1209353384724436307}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &490177371 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1209353384040626529, guid: d6d52077fa9c98c42a886747e7c517d2, type: 3}
+  m_PrefabInstance: {fileID: 1209353384724436307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490177370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5eceb3351e82db41ad4ab1daaeccbd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &490177378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,6 +286,46 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: b46471d83e031254281f6b2736618117, type: 2}
+    - target: {fileID: 1209353384040626528, guid: d6d52077fa9c98c42a886747e7c517d2, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209353384040626528, guid: d6d52077fa9c98c42a886747e7c517d2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionId
+      value: 730e00a9-542c-416d-8113-4efb1e5c695b
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209353384040626528, guid: d6d52077fa9c98c42a886747e7c517d2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionName
+      value: OnFoot/ChangeWeapon[/Keyboard/e]
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209353384040626528, guid: d6d52077fa9c98c42a886747e7c517d2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209353384040626528, guid: d6d52077fa9c98c42a886747e7c517d2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209353384040626528, guid: d6d52077fa9c98c42a886747e7c517d2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 490177371}
+    - target: {fileID: 1209353384040626528, guid: d6d52077fa9c98c42a886747e7c517d2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209353384040626528, guid: d6d52077fa9c98c42a886747e7c517d2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnChangeWeapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209353384040626528, guid: d6d52077fa9c98c42a886747e7c517d2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UdemyKiller.Inputs.InputReader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209353384040626528, guid: d6d52077fa9c98c42a886747e7c517d2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1209353384040626530, guid: d6d52077fa9c98c42a886747e7c517d2, type: 3}
       propertyPath: m_RootOrder
       value: 1

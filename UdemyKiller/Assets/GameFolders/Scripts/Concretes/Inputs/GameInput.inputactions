@@ -28,6 +28,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "ChangeWeapon",
+                    "type": "Button",
+                    "id": "730e00a9-542c-416d-8113-4efb1e5c695b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Tap(duration=0.1)"
                 }
             ],
             "bindings": [
@@ -160,6 +168,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c40330dc-4d84-4bc3-9c7b-b6ae9d485997",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeWeapon",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

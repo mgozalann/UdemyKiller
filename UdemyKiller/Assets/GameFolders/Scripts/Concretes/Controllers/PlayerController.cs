@@ -25,6 +25,8 @@ namespace UdemyKiller.Controllers
         IRotator _xRotation;
         IRotator _yRotator;
 
+        InventoryController _inventory;
+
 
         CharacterAnimation _animation; 
 
@@ -38,6 +40,7 @@ namespace UdemyKiller.Controllers
             _yRotator = new RotatorY(this);
             _mover = new MoveWithCharacterController(this);
             _animation = new CharacterAnimation(this);
+            _inventory = GetComponent<InventoryController>();
         }
  
         void Update()
@@ -49,7 +52,11 @@ namespace UdemyKiller.Controllers
 
             if (_input.IsAttackButtonPressed)
             {
-                //_currentWeapon.Attack();
+                _inventory.CurrentWeapon.Attack();
+            }
+            if (_input.IsInventoryButtonPressed)
+            {
+                _inventory.ChangeWeapon();
             }
         }
 

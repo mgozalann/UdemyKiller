@@ -19,4 +19,4 @@ MonoBehaviour:
     m_Bits: 55
   _attackMaxDelay: 0.1
   _attackType: 1
-  animatorOverride: {fileID: 22100000, guid: 3da3235560806a84e83432c9b2699469, type: 2}
+  animatorOverride: {fileID: 22100000, guid: 5ab4f2d8d118a7e41a1eb209e8abdbfa, type: 2}
