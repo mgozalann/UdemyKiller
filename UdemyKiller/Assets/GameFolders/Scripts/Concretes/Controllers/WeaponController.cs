@@ -34,6 +34,8 @@ namespace UdemyKiller.Controllers
             if (!_canFire) return;
             
             _attackType.AttackAction();
+            Debug.Log("Attack");
+
 
             _currentTime = 0;
         }

@@ -9,15 +9,17 @@ namespace UdemyKiller.Combats
     public class Health : MonoBehaviour, IHealth
     {
         [SerializeField] HealthScriptableObject _healthInfo;
-        public bool IsDead => _currentHealth <= 0;
 
         int _currentHealth;
-
-
+        int _maxHealth;
+        public int MaxHealth => _maxHealth;
+        public bool IsDead => _currentHealth <= 0;
+        public int CurrentHealth => _currentHealth;
 
         private void Awake()
         {
-            _currentHealth = _healthInfo.MaxHealth;
+            _maxHealth = _healthInfo.MaxHealth;
+            _currentHealth = _maxHealth;
         }
 
         public void TakeDamage(int damage)
@@ -25,6 +27,7 @@ namespace UdemyKiller.Combats
             if (IsDead) return;
 
             _currentHealth -= damage;
+
         }
     }
 

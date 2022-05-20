@@ -68,6 +68,8 @@ namespace UdemyKiller.Controllers
         private void LateUpdate()
         {
             _animation.MoveAnimation(Mathf.Abs(_direction.magnitude));
+            _animation.AttackAnimation(_input.IsAttackButtonPressed);
+
         }
     }
 

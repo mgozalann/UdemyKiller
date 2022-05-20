@@ -20,5 +20,10 @@ namespace UdemyKiller.Animations
 
             _animator.SetFloat("moveSpeed", moveSpeed,0.2f,Time.deltaTime);
         }
+
+        public void AttackAnimation(bool isAttack)
+        {
+            _animator.SetBool("isAttack", isAttack);
+        }
     }
 }
