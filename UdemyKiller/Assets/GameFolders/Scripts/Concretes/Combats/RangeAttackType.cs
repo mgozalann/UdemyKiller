@@ -25,6 +25,7 @@ namespace UdemyKiller.Combats
                 if (hit.collider.TryGetComponent(out IHealth health))
                 {
                     health.TakeDamage(_attackSO.Damage);
+                    Debug.Log("çalýþtý");
                 }
             }
         }

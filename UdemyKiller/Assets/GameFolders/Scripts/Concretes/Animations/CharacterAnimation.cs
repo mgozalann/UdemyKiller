@@ -25,5 +25,10 @@ namespace UdemyKiller.Animations
         {
             _animator.SetBool("isAttack", isAttack);
         }
+
+        public void DeadAnimation(bool isDead)
+        {
+
+        }
     }
 }

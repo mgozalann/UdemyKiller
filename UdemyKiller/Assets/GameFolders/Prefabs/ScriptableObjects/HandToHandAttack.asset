@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 499a02837c7c3614da596049bc220d2d, type: 3}
   m_Name: HandToHandAttack
   m_EditorClassIdentifier: 
-  _damage: 1
+  _damage: 5
   _floatValue: 0.3
   _layerMask:
     serializedVersion: 2
     m_Bits: 8
-  _attackMaxDelay: 1.65
+  _attackMaxDelay: 1.5
   _attackType: 1
   animatorOverride: {fileID: 0}

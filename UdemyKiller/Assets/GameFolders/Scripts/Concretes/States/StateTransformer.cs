@@ -1,14 +1,19 @@
 using UdemyKiller.Abstracts.States;
-public class StateTransformer
-{
-    public IState To { get; }
-    public IState From { get; }
-    public System.Func<bool> Condition { get; }
 
-    public StateTransformer(IState to, IState from, System.Func<bool> condition)
+namespace UdemyKiller.States
+{
+    public class StateTransformer
     {
-        To = to;
-        From = from;
-        Condition = condition;
+        public IState To { get; }
+        public IState From { get; }
+        public System.Func<bool> Condition { get; }
+
+        public StateTransformer(IState to, IState from, System.Func<bool> condition)
+        {
+            To = to;
+            From = from;
+            Condition = condition;
+        }
     }
+
 }

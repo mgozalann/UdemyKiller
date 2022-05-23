@@ -7,66 +7,62 @@ using UdemyKiller.Abstracts.Movements;
 using UdemyKiller.Movements;
 using UdemyKiller.Animations;
 using UdemyKiller.Abstracts.Combats;
+using UdemyKiller.States;
+using UdemyKiller.States.EnemyStates;
 
 namespace UdemyKiller.Controllers
 {
-    public class EnemyController : MonoBehaviour, IEntityController
+    public class EnemyController : MonoBehaviour, IEnemyController
     {
-
-        IMover _mover;
-        IHealth _health;
-        CharacterAnimation _animation;
+        StateMachine _stateMachine;
         NavMeshAgent _navMeshAgent;
-        InventoryController _inventory;
 
-        Transform _playerTrans;
-
-        private bool _canAttack;
+        IHealth _health;
+        public bool CanAttack =>
+            Vector3.Distance(Target.position, transform.position) <= _navMeshAgent.stoppingDistance && _navMeshAgent.velocity == Vector3.zero;
+        public IMover Mover { get; private set; }
+        public InventoryController Inventory { get; private set; }
+        public CharacterAnimation Animation { get; private set; }
+        public Transform Target { get; set; }
+        public float Magnitude => _navMeshAgent.velocity.magnitude;
 
         private void Awake()
         {
-            _mover = new MoveWithNavMesh(this);
-            _animation = new CharacterAnimation(this);
+            Inventory = GetComponent<InventoryController>();
+            Mover = new MoveWithNavMesh(this);
+            Animation = new CharacterAnimation(this);
+
             _navMeshAgent = GetComponent<NavMeshAgent>();
-            _health = GetComponent<IHealth>(); 
-            _inventory = GetComponent<InventoryController>();
+            _health = GetComponent<IHealth>();
+            _stateMachine = new StateMachine();
         }
         private void Start()
         {
-            _playerTrans = FindObjectOfType<PlayerController>().transform;
+            Target = FindObjectOfType<PlayerController>().transform;
+
+            AttackState attackState = new AttackState(this);
+            ChaseState chaseState = new ChaseState(this);
+            DeadState deadState = new DeadState(this);
+
+            _stateMachine.AddState(attackState, chaseState, () => CanAttack);
+            _stateMachine.AddState(chaseState, attackState, () => !CanAttack);
+            _stateMachine.AddAnyState(deadState, () => _health.IsDead);
+
+            _stateMachine.SetState(chaseState);
+
         }
         private void Update()
         {
-            if (_health.IsDead) 
-            {
-                _canAttack = false;
-                return;
-            }
-
-
-            _mover.MoveAction(_playerTrans.transform.position, 10f);
-
-            _canAttack = Vector3.Distance(_playerTrans.position, transform.position) <= _navMeshAgent.stoppingDistance && _navMeshAgent.velocity == Vector3.zero;
-            
+            _stateMachine.Tick();
         }
 
         private void FixedUpdate()
         {
-            if (_canAttack)
-            {
-                _inventory.CurrentWeapon.Attack();
-            }
+            _stateMachine.FixedTick();
         }
         private void LateUpdate()
         {
-            _animation.MoveAnimation(_navMeshAgent.velocity.magnitude);
-            _animation.AttackAnimation(_canAttack);
+            _stateMachine.LateTick();
         }
-
-
-
-
-
     }
-
 }

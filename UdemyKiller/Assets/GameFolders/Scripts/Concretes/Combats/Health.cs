@@ -11,23 +11,20 @@ namespace UdemyKiller.Combats
         [SerializeField] HealthScriptableObject _healthInfo;
 
         int _currentHealth;
-        int _maxHealth;
-        public int MaxHealth => _maxHealth;
         public bool IsDead => _currentHealth <= 0;
-        public int CurrentHealth => _currentHealth;
+        public event System.Action<int, int> OnTakeHit;
 
         private void Awake()
         {
-            _maxHealth = _healthInfo.MaxHealth;
-            _currentHealth = _maxHealth;
+            _currentHealth = _healthInfo.MaxHealth;
         }
 
         public void TakeDamage(int damage)
         {
+            Debug.Log(IsDead);
             if (IsDead) return;
-
             _currentHealth -= damage;
-
+            OnTakeHit?.Invoke(_currentHealth, _healthInfo.MaxHealth);
         }
     }
 

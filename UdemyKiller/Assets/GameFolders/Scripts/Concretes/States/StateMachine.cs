@@ -4,61 +4,75 @@ using System.Collections.Generic;
 using UdemyKiller.Abstracts.States;
 using UnityEngine;
 
-public class StateMachine : MonoBehaviour
+namespace UdemyKiller.States
 {
-    List<StateTransformer> _stateTransformers = new List<StateTransformer>();
-    List<StateTransformer> _anyTransformer = new List<StateTransformer>();
-
-    IState _currentState;
-
-    public void SetState(IState state)
+    public class StateMachine : MonoBehaviour
     {
-        if (_currentState == state) return;
+        List<StateTransformer> _stateTransformers = new List<StateTransformer>();
+        List<StateTransformer> _anyStateTransformer = new List<StateTransformer>();
 
-        _currentState?.OnExit();
+        IState _currentState;
 
-        _currentState = state;
-
-        _currentState.OnEnter();
-    }
-
-    public void Tick()
-    {
-        StateTransformer stateTransformer = CheckForTransformer();
-
-        if (stateTransformer != null)
+        public void SetState(IState state)
         {
-            SetState(stateTransformer.To);
+            if (_currentState == state) return;
+
+            _currentState?.OnExit();
+
+            _currentState = state;
+
+            _currentState.OnEnter();
         }
 
-        _currentState.Tick();
-    }
-
-    private StateTransformer CheckForTransformer()
-    {
-        foreach (StateTransformer stateTransformer in _anyTransformer)
+        public void Tick()
         {
-            if (stateTransformer.Condition.Invoke()) return stateTransformer;
+            StateTransformer stateTransformer = CheckForTransformer();
+
+            if (stateTransformer != null)
+            {
+                SetState(stateTransformer.To);
+            }
+
+            _currentState.Tick();
         }
 
-        foreach (StateTransformer stateTransformer in _stateTransformers)
+        public void FixedTick()
         {
-            if (stateTransformer.Condition.Invoke() && _currentState == stateTransformer.From) return stateTransformer;
+            _currentState.FixedTick();
         }
 
-        return null;
-    }
+        public void LateTick()
+        {
+            _currentState.LateTick();
 
-    public void AddState(IState from, IState to, System.Func<bool> condition)
-    {
-        StateTransformer stateTransformer = new StateTransformer(from, to, condition);
-        _stateTransformers.Add(stateTransformer);
-    }
+        }
+        private StateTransformer CheckForTransformer()
+        {
+            foreach (StateTransformer stateTransformer in _anyStateTransformer)
+            {
+                if (stateTransformer.Condition.Invoke()) return stateTransformer;
+            }
 
-    public void AddAnyState(IState to, System.Func<bool> condition)
-    {
-        StateTransformer stateTransformer = new StateTransformer(null, to, condition);
-        _stateTransformers.Add(stateTransformer);
+            foreach (StateTransformer stateTransformer in _stateTransformers)
+            {
+                if (stateTransformer.Condition.Invoke() && _currentState == stateTransformer.From) return stateTransformer;
+            }
+
+            return null;
+        }
+
+        public void AddState(IState to, IState from, System.Func<bool> condition)
+        {
+            StateTransformer stateTransformer = new StateTransformer(to, from, condition);
+            _stateTransformers.Add(stateTransformer);
+        }
+
+        public void AddAnyState(IState to, System.Func<bool> condition)
+        {
+            StateTransformer stateTransformer = new StateTransformer(null, to, condition);
+            _stateTransformers.Add(stateTransformer);
+        }
+
     }
 
 }

@@ -27,11 +27,12 @@ namespace UdemyKiller.Controllers
 
         InventoryController _inventory;
 
-
         CharacterAnimation _animation; 
 
         Vector3 _direction;
 
+
+        public InventoryController Inventory => _inventory;
 
         void Awake()
         {
